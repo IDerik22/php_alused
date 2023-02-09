@@ -40,20 +40,20 @@
         <h2>Sõidu läbimisaeg</h2>
         <form>
             <div class="form-group">
-                <label for="startTime">Start Time:</label>
+                <label for="startTime">Algus aeg:</label>
                 <input type="text" class="form-control" id="startTime">
             </div>
             <div class="form-group">
-                <label for="endTime">End Time:</label>
+                <label for="endTime">Lõpp aeg:</label>
                 <input type="text" class="form-control" id="endTime">
             </div>
-            <button type="button" class="btn btn-primary" onclick="calculateDriveTime()">Calculate Drive Time</button>
+            <button type="button" class="btn btn-primary" onclick="calculateDriveTime()">Arvuta sõidu läbimisaeg</button>
         </form>
         <br>
         <p id="driveTime"></p>
     </div>
 
-    <div class="container mt-5">
+    <div class="container">
         <h1 class="text-center">Töötajat palga arvutamine</h1>
         <?php
         $file = fopen("tootajad.csv", "r");
@@ -81,14 +81,14 @@
         <table class="table mt-5">
             <thead>
                 <tr>
-                    <th>Gender</th>
-                    <th>Average Salary</th>
-                    <th>Highest Salary</th>
+                    <th>Sugu</th>
+                    <th>Keskmine palk</th>
+                    <th>Kõrgem palk</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Male</td>
+                    <td>Mees</td>
                     <td>
                         <?php echo "€" . number_format($male_average, 2); ?>
                     </td>
@@ -97,7 +97,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Female</td>
+                    <td>Naine</td>
                     <td>
                         <?php echo "€" . number_format($female_average, 2); ?>
                     </td>
@@ -109,11 +109,11 @@
         </table>
         <?php
         if ($male_average > $female_average) {
-            echo "<p class='mt-5 text-danger'>Ettevõttes võib esineda soolist diskrimineerimist, kuna meeste keskmine palk on kõrgem kui naiste oma.</p>";
+            echo "<p class='mt-5 text-danger'>Ettevõttes võib esineda soolist diskrimineerimist, kuna meeste keskmine palk on kõrgem kui naiste oma!</p>";
         } else if ($male_average < $female_average) {
-            echo "<p class='mt-5 text-success'>Soolist diskrimineerimist ettevõttes ei esine, kuna naiste keskmine palk on meeste omaga kõrgem või võrdne.</p>";
+            echo "<p class='mt-5 text-success'>Soolist diskrimineerimist ettevõttes ei esine, kuna naiste keskmine palk on meeste omaga kõrgem või võrdne!</p>";
         } else {
-            echo "<p class='mt-5 text-success'>Soolist diskrimineerimist ettevõttes ei esine, kuna meeste ja naiste keskmine palk on võrdne.</p>";
+            echo "<p class='mt-5 text-success'>Soolist diskrimineerimist ettevõttes ei esine, kuna meeste ja naiste keskmine palk on võrdne!</p>";
         }
         ?>
     </div>
