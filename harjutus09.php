@@ -1,4 +1,10 @@
 <?php
+/*
+09 PHP
+Erik Teppan
+*/
+?>
+<?php
 
 function greetUser($nimi)
 {
