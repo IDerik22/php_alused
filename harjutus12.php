@@ -90,19 +90,19 @@
                 <tr>
                     <td>Male</td>
                     <td>
-                        <?php echo "$" . number_format($male_average, 2); ?>
+                        <?php echo "€" . number_format($male_average, 2); ?>
                     </td>
                     <td>
-                        <?php echo "$" . $male_highest; ?>
+                        <?php echo "€" . $male_highest; ?>
                     </td>
                 </tr>
                 <tr>
                     <td>Female</td>
                     <td>
-                        <?php echo "$" . number_format($female_average, 2); ?>
+                        <?php echo "€" . number_format($female_average, 2); ?>
                     </td>
                     <td>
-                        <?php echo "$" . $female_highest; ?>
+                        <?php echo "€" . $female_highest; ?>
                     </td>
                 </tr>
             </tbody>
@@ -118,4 +118,5 @@
         ?>
     </div>
 </body>
+
 </html>
